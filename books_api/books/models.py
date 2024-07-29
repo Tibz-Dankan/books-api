@@ -6,7 +6,7 @@ class Book(models.Model):
     published_date = models.DateField()
     isbn = models.CharField(max_length=25, unique=True)
     pages = models.IntegerField()
-    cover = models.URLField()
+    cover = models.ImageField(upload_to='covers/')
 
     def __str__(self):
         return self.title
